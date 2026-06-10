@@ -117,10 +117,13 @@
     </section>
 
     <section id="resultScreen" class="hidden w-full rounded-3xl p-6 relative overflow-hidden fade-in">
-      <div id="pdfExportArea" class="p-1">
+      
+      <div id="pdfExportArea" class="p-2 bg-transparent">
         <div class="text-center mb-6">
-          <h2 class="text-xl font-black tracking-wider uppercase bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">สรุปคะแนน โรคจากการประกอบอาชีพและสิ่งแวดล้อม (ก่อน อบรม)</h2>
-          <p id="resDate" class="text-[10px] font-digital tracking-widest text-slate-500 mt-1">TIMESTAMP: -</p>
+          <h2 class="text-lg font-bold leading-snug tracking-wide bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+            สรุปคะแนน โรคจากการประกอบอาชีพและสิ่งแวดล้อม<br><span class="text-sm font-medium text-cyan-400/90">(ก่อนการอบรม)</span>
+          </h2>
+          <p id="resDate" class="text-[10px] font-digital tracking-widest text-slate-500 mt-2">TIMESTAMP: -</p>
         </div>
 
         <div class="flex justify-center mb-6">
@@ -137,20 +140,22 @@
         </div>
 
         <div class="grid grid-cols-2 gap-3 mb-6">
-          <div class="bg-slate-900/50 p-3.5 rounded-2xl border border-slate-800/60 backdrop-blur-sm">
+          <div class="bg-slate-900/50 p-3.5 rounded-2xl border border-slate-800/60 backdrop-blur-sm relative overflow-hidden">
             <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest font-digital">Candidate</p>
             <p id="resName" class="text-sm font-bold text-white truncate mt-1">-</p>
             <p id="resDept" class="text-xs text-slate-400 truncate mt-0.5">-</p>
+            <svg class="w-12 h-12 text-slate-800/20 absolute right-[-5px] bottom-[-5px]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"></path></svg>
           </div>
-          <div class="bg-slate-900/50 p-3.5 rounded-2xl border border-slate-800/60 backdrop-blur-sm">
+          <div class="bg-slate-900/50 p-3.5 rounded-2xl border border-slate-800/60 backdrop-blur-sm relative overflow-hidden">
             <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest font-digital">Statistics</p>
             <p id="resScoreRaw" class="text-sm font-bold text-white mt-1">ถูก 0 / ผิด 0 ข้อ</p>
             <p id="resDuration" class="text-xs text-slate-400 mt-0.5">เวลา: -</p>
+            <svg class="w-12 h-12 text-slate-800/20 absolute right-[-5px] bottom-[-5px]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"></path></svg>
           </div>
         </div>
       </div>
 
-      <div class="space-y-3">
+      <div class="space-y-3.5">
         <div class="grid grid-cols-2 gap-2.5">
           <button id="printBtn" class="min-h-[44px] bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 rounded-xl font-semibold text-xs tracking-wide transition-all flex items-center justify-center gap-1.5 touch-manipulation">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.82l2.61-2.62m0 0l2.61 2.62m-2.61-2.62V18m4.93-6.42A4.5 4.5 0 0012 3a4.5 4.5 0 00-3.418 7.412m5.356-1.512a4.5 4.5 0 011.041 8.878m-1.41-1.41L15 15.75m0 0l-1.5 1.5M15 15.75H9"></path></svg>
@@ -161,11 +166,9 @@
             <span>ดาวน์โหลด PDF</span>
           </button>
         </div>
-        <!-- <button id="reviewBtn" class="w-full min-h-[44px] bg-slate-900 border border-slate-800 text-cyan-400 rounded-xl font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 touch-manipulation">
-          ดูเฉลยระบบข้อสอบอย่างละเอียด
-        </button> -->
-        <button id="restartBtn" class="w-full min-h-[48px] bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-slate-950 rounded-xl font-black text-base shadow-lg shadow-cyan-500/20 transition-all flex items-center justify-center gap-1.5 touch-manipulation">
-          เริ่มต้นทำใหม่อีกครั้ง
+        
+        <button id="restartBtn" class="w-full min-h-[50px] bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-slate-950 rounded-xl font-black text-base shadow-lg shadow-cyan-500/20 transition-all flex items-center justify-center gap-1.5 touch-manipulation">
+          กลับสู่หน้าหลัก / ทำใหม่อีกครั้ง
         </button>
       </div>
     </section>

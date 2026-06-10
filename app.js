@@ -397,10 +397,14 @@ function showReviewScreen() {
 function setupActionButtons() {
   DOM.startBtn.onclick = startExam;
   DOM.nextBtn.onclick = handleNextStep;
-  DOM.reviewBtn.onclick = showReviewScreen;
   DOM.backToResultBtn.onclick = () => switchScreen(DOM.reviewScreen, DOM.resultScreen);
-  DOM.restartBtn.onclick = () => { DOM.regForm.reset(); DOM.startBtn.disabled = true; switchScreen(DOM.resultScreen, DOM.loginScreen); };
   DOM.printBtn.onclick = () => window.print();
+
+  DOM.restartBtn.onclick = () => { 
+    DOM.regForm.reset(); 
+    DOM.startBtn.disabled = true; 
+    switchScreen(DOM.resultScreen, DOM.loginScreen); 
+  };
 
   DOM.pdfBtn.onclick = () => {
     const element = document.getElementById('pdfExportArea');
